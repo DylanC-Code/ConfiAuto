@@ -27,8 +27,11 @@ export default function HomePage({ t, locale }: Props) {
 
         <p className="mt-3 text-lg text-muted-foreground">{t.hero.subtitle}</p>
 
-        <a href="#packs" className="w-full max-w-[230px] mx-auto">
-          <Button className="mt-6 w-full py-5 text-base">{t.hero.cta}</Button>
+        <a
+          href="#packs"
+          className="inline-block mt-6 px-6 py-3 bg-primary  rounded-md cursor-pointer text-black font-semibold max-w-[250px] mx-auto hover:bg-primary/80 transition-colors"
+        >
+          {t.hero.cta}
         </a>
       </section>
 
@@ -56,10 +59,12 @@ export default function HomePage({ t, locale }: Props) {
                   ))}
                 </div>
 
-                <a href="https://wa.me/33612345678" target="_blank">
-                  <Button className="mt-6 w-full py-5 text-base">
-                    {pack.cta}
-                  </Button>
+                <a
+                  href="https://wa.me/33612345678"
+                  target="_blank"
+                  className="inline-block mt-6 px-6 py-3 bg-primary  rounded-md cursor-pointer text-black font-semibold max-w-[250px] mx-auto hover:bg-primary/80 transition-colors"
+                >
+                  {pack.cta}
                 </a>
               </CardContent>
             </Card>
@@ -133,16 +138,9 @@ export default function HomePage({ t, locale }: Props) {
         <a
           href="https://wa.me/33612345678"
           target="_blank"
-          className="w-full max-w-[230px] mx-auto block"
+          className="inline-block mt-6 px-6 py-3 bg-primary  rounded-md cursor-pointer text-black font-semibold max-w-[250px] mx-auto hover:bg-primary/80 transition-colors leading-5"
         >
-          <Button className="w-full text-base leading-5">
-            {t.cta.button.split("\n").map((line, i) => (
-              <span key={i}>
-                {line}
-                <br />
-              </span>
-            ))}
-          </Button>
+          {t.cta.button}
         </a>
       </section>
 

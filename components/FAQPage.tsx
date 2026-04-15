@@ -60,11 +60,9 @@ export default function FAQPage({ t, locale }: Props) {
         <a
           href="https://wa.me/33612345678"
           target="_blank"
-          className="w-full max-w-[230px] mx-auto block"
+          className="inline-block mt-6 px-6 py-3 bg-primary  rounded-md cursor-pointer text-black font-semibold max-w-[250px] mx-auto hover:bg-primary/80 transition-colors leading-5"
         >
-          <Button className="w-full text-base">
-            {t.cta.button.replace("\n", " ")}
-          </Button>
+          {t.cta.button}
         </a>
       </section>
 

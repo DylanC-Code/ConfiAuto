@@ -5,17 +5,23 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Content } from "@/lib/content";
+import { Content, Locale } from "@/lib/content";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 type Props = Readonly<{
   t: Content;
+  locale: Locale;
 }>;
 
-export default function FAQPage({ t }: Props) {
+export default function FAQPage({ t, locale }: Props) {
   return (
     <main className="bg-background text-foreground min-h-screen">
       {/* HERO FAQ */}
       <section className="py-20 px-4 text-center bg-[radial-gradient(circle_at_top,var(--color-background-light),var(--color-background))]">
+        <div className="absolute top-4 right-4">
+          <LanguageSwitcher locale={locale} />
+        </div>
+
         <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary">
           {t.faqPage.hero.title}
         </h1>

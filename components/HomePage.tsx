@@ -7,6 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Content, Locale } from "@/lib/content";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 type Props = Readonly<{
   t: Content;
@@ -18,6 +19,10 @@ export default function HomePage({ t, locale }: Props) {
     <main className="bg-background text-foreground">
       {/* HERO */}
       <section className="h-screen flex flex-col items-center justify-center text-center px-4 bg-[radial-gradient(circle_at_top,var(--color-background-light),var(--color-background))]">
+        <div className="absolute top-4 right-4">
+          <LanguageSwitcher locale={locale} />
+        </div>
+
         <h1 className="text-5xl md:text-6xl font-heading font-bold text-primary">
           {t.hero.title}
         </h1>

@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function HomePage({ t }: any) {
+export default function HomePage({ t, locale }: any) {
   return (
     <main className="bg-background text-foreground">
       {/* HERO */}
@@ -107,7 +107,7 @@ export default function HomePage({ t }: any) {
 
         <div className="text-center mt-6">
           <a
-            href="/faq"
+            href={`/${locale}/faq`}
             className="text-sm text-muted-foreground hover:underline"
           >
             {t.faqPreview.more}
@@ -116,7 +116,7 @@ export default function HomePage({ t }: any) {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 text-center bg-gradient-to-r from-background to-card">
+      <section className="py-20 px-4 text-center bg-linear-to-r from-background to-card">
         <h2 className="text-2xl text-primary mb-6 font-heading">
           {t.cta.title}
         </h2>
@@ -141,7 +141,7 @@ export default function HomePage({ t }: any) {
       <footer className="text-center py-8 border-t border-border text-sm text-muted-foreground">
         {t.footer.contact}
         <div className="mt-2">
-          <a href="/faq" className="hover:underline">
+          <a href={`/${locale}/faq`} className="hover:underline">
             {t.footer.faq}
           </a>
         </div>

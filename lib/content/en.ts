@@ -78,6 +78,11 @@ const en = {
   },
 
   faqPage: {
+    seo: {
+      title: "Car buying FAQ | avoid car scams | ConfiAuto",
+      description: "All answers to safely buy or sell a car and avoid scams.",
+    },
+
     hero: {
       title: "FAQ",
       subtitle: "All the answers to buy or sell your car safely",

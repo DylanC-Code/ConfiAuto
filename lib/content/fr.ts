@@ -78,6 +78,12 @@ const fr = {
   },
 
   faqPage: {
+    seo: {
+      title: "FAQ achat voiture | éviter arnaque voiture | ConfiAuto",
+      description:
+        "Toutes les réponses pour éviter les arnaques lors de l'achat ou la vente d'une voiture.",
+    },
+
     hero: {
       title: "FAQ",
       subtitle:

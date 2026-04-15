@@ -78,6 +78,12 @@ const es = {
   },
 
   faqPage: {
+    seo: {
+      title: "FAQ compra coche | evitar fraudes | ConfiAuto",
+      description:
+        "Todas las respuestas para comprar o vender un coche sin riesgos.",
+    },
+
     hero: {
       title: "FAQ",
       subtitle:

@@ -31,6 +31,10 @@ export type BaseContent = {
     more: string;
   };
   faqPage: {
+    seo: {
+      title: string;
+      description: string;
+    };
     hero: {
       title: string;
       subtitle: string;

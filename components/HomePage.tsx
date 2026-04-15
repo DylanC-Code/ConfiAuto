@@ -32,10 +32,7 @@ export default function HomePage({ t }: any) {
 
         <div className="grid md:grid-cols-2 gap-6">
           {t.packs.items.map((pack: any, i: number) => (
-            <Card
-              key={i}
-              className="bg-white/5 border border-yellow-500/30 backdrop-blur-lg hover:-translate-y-2 transition"
-            >
+            <Card key={i} className="card-ui hover:-translate-y-2 transition">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white">{pack.title}</h3>
                 <p className="text-2xl text-yellow-500 mt-2">{pack.price}</p>
@@ -66,10 +63,7 @@ export default function HomePage({ t }: any) {
 
         <div className="grid md:grid-cols-3 gap-6 text-center">
           {t.trust.items.map((item: string, i: number) => (
-            <Card
-              key={i}
-              className="bg-white/5 p-6 border border-yellow-500/30 text-white font-medium"
-            >
+            <Card key={i} className="card-ui text-white font-medium">
               {item}
             </Card>
           ))}
@@ -86,7 +80,7 @@ export default function HomePage({ t }: any) {
           {t.testimonials.items.map((item: string, i: number) => (
             <Card
               key={i}
-              className="bg-white/5 border-l-4 border-yellow-500 p-5"
+              className="card-ui border-l-4 border-yellow-500 p-5"
             >
               {item}
             </Card>

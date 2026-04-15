@@ -1,3 +1,5 @@
+import { BaseContent } from "./types";
+
 const en = {
   hero: {
     title: "ConfiAuto",
@@ -185,6 +187,6 @@ const en = {
     contact: "📞 +33 6 12 34 56 78 | Instagram @confiauto",
     faq: "FAQ",
   },
-} as const;
+} satisfies BaseContent;
 
 export default en;

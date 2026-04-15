@@ -1,3 +1,5 @@
+import { BaseContent } from "./types";
+
 const fr = {
   hero: {
     title: "ConfiAuto",
@@ -186,6 +188,6 @@ const fr = {
     contact: "📞 06 12 34 56 78 | Instagram @confiauto",
     faq: "FAQ",
   },
-} as const;
+} satisfies BaseContent;
 
 export default fr;

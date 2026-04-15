@@ -18,18 +18,16 @@ export default function HomePage({ t, locale }: Props) {
   return (
     <main className="bg-background text-foreground">
       {/* HERO */}
-      <section className="h-screen flex flex-col items-center justify-center text-center px-4 bg-[radial-gradient(circle_at_top,var(--color-background-light),var(--color-background))]">
+      <section className="min-h-[80vh] flex flex-col justify-center text-center px-4">
         <div className="absolute top-4 right-4">
           <LanguageSwitcher locale={locale} />
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-heading font-bold text-primary">
-          {t.hero.title}
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold">{t.hero.title}</h1>
 
         <p className="mt-3 text-lg text-muted-foreground">{t.hero.subtitle}</p>
 
-        <a href="#packs" className="w-full max-w-[230px]">
+        <a href="#packs" className="w-full max-w-[230px] mx-auto">
           <Button className="mt-6 w-full py-5 text-base">{t.hero.cta}</Button>
         </a>
       </section>

@@ -121,10 +121,13 @@
 }
 
 .card-ui {
-  @apply bg-card border border-border backdrop-blur-lg;
+  @apply bg-card border border-border backdrop-blur-lg rounded-xl;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @apply font-heading;
 }
 

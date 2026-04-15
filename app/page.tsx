@@ -1,65 +1,138 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="bg-[#0B1C2C] text-white">
+      {/* HERO */}
+      <section className="h-screen flex flex-col items-center justify-center text-center px-4 bg-[radial-gradient(circle_at_top,#122a44,#050c14)]">
+        <h1 className="text-5xl md:text-6xl font-bold text-yellow-500">
+          ConfiAuto
+        </h1>
+        <p className="mt-3 text-lg opacity-80">
+          Le bouclier anti-arnaque automobile
+        </p>
+
+        <a href="#packs" className="w-full max-w-[230px]">
+          <Button className="mt-6 bg-yellow-500 text-black font-semibold hover:scale-105 transition w-full max-w-[230px] py-5">
+            Découvrir les packs
+          </Button>
+        </a>
+      </section>
+
+      {/* PACKS */}
+      <section id="packs" className="py-20 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl text-yellow-500 text-center mb-10">
+          Nos services premium
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="bg-white/5 border border-yellow-500/30 backdrop-blur-lg hover:-translate-y-2 transition">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-white">Pack Amis Mécano</h3>
+              <p className="text-2xl text-yellow-500 mt-2">100€</p>
+              <p className="mt-2 text-white">✔ 105 points de contrôle</p>
+
+              <div className="mt-4 space-y-2 text-sm opacity-90 text-gray-100">
+                <p>🔧 Inspection complète du véhicule</p>
+                <p>📊 Analyse état réel</p>
+                <p>🚗 Essai routier</p>
+              </div>
+
+              <a href="https://wa.me/33612345678" target="_blank">
+                <Button className="mt-6 bg-yellow-500 text-black font-semibold text-lg hover:scale-105 transition w-full max-w-[230px] py-5">
+                  Réserver
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/5 border border-yellow-500/30 backdrop-blur-lg hover:-translate-y-2 transition">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-white">
+                Pack Amis Courtier
+              </h3>
+              <p className="text-2xl text-yellow-500 mt-2">À partir de 100€</p>
+              <p className="mt-2 text-white">✔ Service complet d’achat</p>
+
+              <div className="mt-4 space-y-2 text-sm opacity-90 text-gray-100">
+                <p>🔎 Recherche du véhicule</p>
+                <p>🤝 Gestion vendeurs</p>
+                <p>📅 Prise de rendez-vous</p>
+                <p>🚗 105 points de contrôle</p>
+              </div>
+
+              <a href="https://wa.me/33612345678" target="_blank">
+                <Button className="mt-6 bg-yellow-500 text-black font-semibold text-lg hover:scale-105 transition w-full max-w-[230px] py-5">
+                  Être accompagné
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* TRUST */}
+      <section className="py-20 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl text-yellow-500 text-center mb-10">
+          Pourquoi nous choisir ?
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+          <Card className="bg-white/5 p-6 border border-yellow-500/30 text-white font-medium text-md hover:scale-103 transition-all duration 300">
+            🔒 Sécurisation des achats
+          </Card>
+          <Card className="bg-white/5 p-6 border border-yellow-500/30 text-white font-medium text-md hover:scale-103 transition-all duration 300">
+            💰 Éviter les arnaques
+          </Card>
+          <Card className="bg-white/5 p-6 border border-yellow-500/30 text-white font-medium text-md hover:scale-103 transition-all duration 300">
+            ⚙ Expertise automobile réelle
+          </Card>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-20 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl text-yellow-500 text-center mb-10">
+          Avis clients
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="bg-white/5 border-l-4 border-yellow-500 p-5 text-white font-medium text-md ">
+            “J’ai évité une arnaque à 3000€ grâce à eux.”
+          </Card>
+          <Card className="bg-white/5 border-l-4 border-yellow-500 p-5 text-white font-medium text-md ">
+            “Service ultra pro, très rassurant.”
+          </Card>
+          <Card className="bg-white/5 border-l-4 border-yellow-500 p-5 text-white font-medium text-md ">
+            “Je recommande à 100% avant achat voiture.”
+          </Card>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 text-center bg-linear-to-r from-[#0B1C2C] to-[#111]">
+        <h2 className="text-2xl text-yellow-500 mb-6">
+          Ne prenez plus de risques inutiles
+        </h2>
+
+        <a
+          href="https://wa.me/33612345678"
+          target="_blank"
+          className="w-full max-w-[230px] py-5 mx-auto block"
+        >
+          <Button className=" bg-yellow-500 text-black font-semibold text-lg hover:scale-105 transition w-full max-w-[230px] h-max py-2 leading-5">
+            Contacter
+            <br />
+            maintenant
+          </Button>
+        </a>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center py-8 border-t border-yellow-500/50 text-sm opacity-80">
+        📞 06 12 34 56 78 | Instagram @confiauto
+      </footer>
+    </main>
   );
 }

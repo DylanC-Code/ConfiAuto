@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -110,6 +116,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 px-4 max-w-4xl mx-auto">
+        <h2 className="text-3xl text-yellow-500 text-center mb-10">
+          Questions fréquentes
+        </h2>
+
+        <div className="bg-white/5 border border-yellow-500/30 rounded-xl p-4">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                Comment fonctionne votre service ?
+              </AccordionTrigger>
+              <AccordionContent>
+                Nous inspectons le véhicule avant achat avec plus de 100 points
+                de contrôle pour éviter toute arnaque.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                Est-ce que vous vous déplacez ?
+              </AccordionTrigger>
+              <AccordionContent>
+                Oui, nous nous déplaçons selon votre localisation pour inspecter
+                le véhicule directement.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger>
+                Que se passe-t-il si le véhicule a un problème ?
+              </AccordionTrigger>
+              <AccordionContent>
+                Nous vous donnons un rapport clair pour éviter un mauvais achat
+                ou négocier le prix.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4">
+              <AccordionTrigger>
+                Combien de temps dure une inspection ?
+              </AccordionTrigger>
+              <AccordionContent>
+                En moyenne entre 1h et 2h selon le véhicule.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        {/* lien vers page FAQ complète */}
+        <div className="text-center mt-6">
+          <a href="/faq" className="text-sm opacity-70 hover:underline">
+            Voir toutes les questions
+          </a>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4 text-center bg-linear-to-r from-[#0B1C2C] to-[#111]">
         <h2 className="text-2xl text-yellow-500 mb-6">
@@ -132,6 +195,11 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="text-center py-8 border-t border-yellow-500/50 text-sm opacity-80">
         📞 06 12 34 56 78 | Instagram @confiauto
+        <div className="mt-2">
+          <a href="/faq" className="underline">
+            FAQ
+          </a>
+        </div>
       </footer>
     </main>
   );

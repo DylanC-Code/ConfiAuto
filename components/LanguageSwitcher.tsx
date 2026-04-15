@@ -18,11 +18,13 @@ type Props = Readonly<{
 const flags: Record<Locale, string> = {
   fr: "/flags/fr.svg",
   en: "/flags/en.svg",
+  es: "/flags/es.svg",
 };
 
 const labels: Record<Locale, string> = {
   fr: "Français",
   en: "English",
+  es: "Español",
 };
 
 export default function LanguageSwitcher({ locale }: Props) {

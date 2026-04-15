@@ -1,4 +1,5 @@
 import { content, Locale } from "@/lib/content";
+
 import type { Metadata } from "next";
 
 type Props = {
@@ -44,6 +45,12 @@ export function generateMetadata(props: Props): Metadata {
   };
 }
 
-export default function LocaleLayout({ children }: Props) {
+export default function LocaleLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return <>{children}</>;
 }
+
+export { generateLocaleParams as generateStaticParams } from "@/lib/generateStaticParams";

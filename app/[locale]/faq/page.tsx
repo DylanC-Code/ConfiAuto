@@ -1,5 +1,6 @@
 import FAQPage from "@/components/FAQPage";
 import { content, Locale } from "@/lib/content";
+
 import { Metadata } from "next";
 
 export function generateMetadata(props: {
@@ -13,8 +14,12 @@ export function generateMetadata(props: {
   };
 }
 
-export default function Page({ params }: { params: { locale: Locale } }) {
+export default function Page({
+  params,
+}: Readonly<{ params: { locale: Locale } }>) {
   const locale = params.locale;
 
   return <FAQPage t={content[locale]} locale={locale} />;
 }
+
+export { generateLocaleParams as generateStaticParams } from "@/lib/generateStaticParams";

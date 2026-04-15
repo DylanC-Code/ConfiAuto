@@ -3,10 +3,11 @@ import { content, Locale } from "@/lib/content";
 
 import { Metadata } from "next";
 
-export function generateMetadata(props: {
-  params: { locale: Locale };
-}): Metadata {
-  const t = content[props.params.locale];
+export async function generateMetadata(props: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const locale = (await props.params).locale;
+  const t = content[locale];
 
   return {
     title: t.faqPage.seo.title,
@@ -14,10 +15,10 @@ export function generateMetadata(props: {
   };
 }
 
-export default function Page({
+export default async function Page({
   params,
-}: Readonly<{ params: { locale: Locale } }>) {
-  const locale = params.locale;
+}: Readonly<{ params: Promise<{ locale: Locale }> }>) {
+  const locale = (await params).locale;
 
   return <FAQPage t={content[locale]} locale={locale} />;
 }

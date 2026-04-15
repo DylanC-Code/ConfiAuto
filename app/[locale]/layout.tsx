@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 const titleMap: Record<Locale, string> = {
@@ -13,8 +13,8 @@ const titleMap: Record<Locale, string> = {
   es: "Inspección de coche antes de comprar | ConfiAuto",
 };
 
-export function generateMetadata(props: Props): Metadata {
-  const locale = props.params.locale;
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const locale = (await props.params).locale;
   const t = content[locale];
 
   const title = titleMap[locale];

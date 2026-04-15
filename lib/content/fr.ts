@@ -186,6 +186,6 @@ const fr = {
     contact: "📞 06 12 34 56 78 | Instagram @confiauto",
     faq: "FAQ",
   },
-};
+} as const;
 
 export default fr;

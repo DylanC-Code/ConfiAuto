@@ -6,8 +6,14 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Content, Locale } from "@/lib/content";
 
-export default function HomePage({ t, locale }: any) {
+type Props = Readonly<{
+  t: Content;
+  locale: Locale;
+}>;
+
+export default function HomePage({ t, locale }: Props) {
   return (
     <main className="bg-background text-foreground">
       {/* HERO */}
@@ -30,7 +36,7 @@ export default function HomePage({ t, locale }: any) {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {t.packs.items.map((pack: any, i: number) => (
+          {t.packs.items.map((pack, i) => (
             <Card key={i} className="card-ui hover:-translate-y-2 transition">
               <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-semibold">
@@ -42,7 +48,7 @@ export default function HomePage({ t, locale }: any) {
                 <p className="mt-2 text-muted-foreground">{pack.subtitle}</p>
 
                 <div className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  {pack.features.map((f: string, idx: number) => (
+                  {pack.features.map((f, idx) => (
                     <p key={idx}>{f}</p>
                   ))}
                 </div>
@@ -65,7 +71,7 @@ export default function HomePage({ t, locale }: any) {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6 text-center">
-          {t.trust.items.map((item: string, i: number) => (
+          {t.trust.items.map((item, i) => (
             <Card key={i} className="card-ui font-medium">
               {item}
             </Card>
@@ -80,7 +86,7 @@ export default function HomePage({ t, locale }: any) {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {t.testimonials.items.map((item: string, i: number) => (
+          {t.testimonials.items.map((item, i) => (
             <Card key={i} className="card-ui border-l-4 border-primary p-5">
               {item}
             </Card>
@@ -96,7 +102,7 @@ export default function HomePage({ t, locale }: any) {
 
         <div className="card-ui p-4">
           <Accordion type="single" collapsible>
-            {t.faqPreview.items.map((item: any, i: number) => (
+            {t.faqPreview.items.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger>{item.q}</AccordionTrigger>
                 <AccordionContent>{item.a}</AccordionContent>
@@ -127,7 +133,7 @@ export default function HomePage({ t, locale }: any) {
           className="w-full max-w-[230px] mx-auto block"
         >
           <Button className="w-full text-base leading-5">
-            {t.cta.button.split("\n").map((line: string, i: number) => (
+            {t.cta.button.split("\n").map((line, i) => (
               <span key={i}>
                 {line}
                 <br />

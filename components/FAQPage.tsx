@@ -5,8 +5,13 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Content } from "@/lib/content";
 
-export default function FAQPage({ t }: any) {
+type Props = Readonly<{
+  t: Content;
+}>;
+
+export default function FAQPage({ t }: Props) {
   return (
     <main className="bg-background text-foreground min-h-screen">
       {/* HERO FAQ */}

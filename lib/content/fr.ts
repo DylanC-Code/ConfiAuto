@@ -79,28 +79,100 @@ const fr = {
     hero: {
       title: "FAQ",
       subtitle:
-        "Toutes les réponses à vos questions avant d’acheter votre véhicule",
+        "Toutes les réponses pour acheter ou vendre votre voiture sans risque",
     },
-    items: [
+
+    categories: [
       {
-        q: "Comment fonctionne votre service ?",
-        a: "Nous analysons le véhicule avant achat avec une inspection complète afin d’éviter toute mauvaise surprise.",
+        title: "🔎 Achat de voiture",
+        items: [
+          {
+            q: "Comment acheter une voiture quand on n’y connaît rien ?",
+            a: "Nous vous accompagnons de A à Z : analyse de vos besoins, recherche de véhicules fiables, vérification complète et négociation du prix. Objectif : éviter les erreurs coûteuses.",
+          },
+          {
+            q: "Est-ce risqué d’acheter une voiture seule ?",
+            a: "Oui, surtout sur le marché de l’occasion. Les risques incluent véhicules accidentés, compteurs modifiés, vices cachés ou faux vendeurs.",
+          },
+          {
+            q: "Comment éviter une arnaque lors de l’achat d’une voiture ?",
+            a: "Faites attention aux prix trop bas, vendeurs pressés, demandes de paiement avant visite ou refus de documents. Nous vérifions chaque véhicule avant achat.",
+          },
+          {
+            q: "Que vérifie Confi’Auto avant un achat ?",
+            a: "Historique du véhicule, état mécanique, cohérence des documents et analyse du prix marché.",
+          },
+          {
+            q: "Quel budget prévoir pour une voiture ?",
+            a: "Nous recommandons de ne pas dépasser 6 mois de salaire et d’optimiser le budget en évitant les mauvaises affaires.",
+          },
+        ],
       },
+
       {
-        q: "Est-ce que vous vous déplacez ?",
-        a: "Oui, nous nous déplaçons directement pour inspecter le véhicule à votre place.",
+        title: "🚗 Vente de voiture",
+        items: [
+          {
+            q: "Comment vendre sa voiture sans se faire arnaquer ?",
+            a: "Les arnaques sont fréquentes (faux virements, acheteurs douteux). Nous sécurisons toute la transaction.",
+          },
+          {
+            q: "Confi’Auto peut-il vendre ma voiture à ma place ?",
+            a: "Oui : estimation, annonce, sélection des acheteurs, gestion des visites et négociation.",
+          },
+          {
+            q: "Comment fixer le bon prix ?",
+            a: "Nous analysons la cote, l’état du véhicule et la demande pour vendre rapidement au meilleur prix.",
+          },
+        ],
       },
+
       {
-        q: "Combien de temps dure une inspection ?",
-        a: "En moyenne entre 1h et 2h selon le type de véhicule et les vérifications nécessaires.",
+        title: "🛡️ Sécurité & anti-arnaque",
+        items: [
+          {
+            q: "Pourquoi faire appel à un courtier automobile ?",
+            a: "Gain de temps, sécurité, meilleur prix et accompagnement personnalisé.",
+          },
+          {
+            q: "Quelles sont les arnaques les plus fréquentes ?",
+            a: "Voiture volée, faux certificat, kilométrage falsifié, véhicule accidenté ou faux professionnels.",
+          },
+          {
+            q: "Est-ce que Confi’Auto garantit un achat sécurisé ?",
+            a: "Oui : zéro arnaque, zéro stress, zéro mauvaise surprise grâce à une méthode professionnelle.",
+          },
+        ],
       },
+
       {
-        q: "Que se passe-t-il si le véhicule a un problème ?",
-        a: "Nous vous fournissons un rapport clair pour vous aider à éviter l’achat ou négocier le prix.",
-      },
-      {
-        q: "Quels types de véhicules inspectez-vous ?",
-        a: "Tous types de véhicules : citadines, SUV, utilitaires, etc.",
+        title: "👩‍🦰 Spécial femmes / acheteuses seules",
+        items: [
+          {
+            q: "Pourquoi Confi’Auto est adapté pour une femme seule ?",
+            a: "Nous réduisons les risques, accompagnons les décisions et sécurisons chaque étape.",
+          },
+          {
+            q: "Est-ce que vous accompagnez lors des rendez-vous ?",
+            a: "Oui, physiquement ou à distance pour analyser et négocier.",
+          },
+          {
+            q: "Puis-je acheter sans me déplacer ?",
+            a: "Oui : recherche, vérification et transaction à distance.",
+          },
+          {
+            q: "Quelle voiture choisir ?",
+            a: "Nous conseillons selon sécurité, fiabilité, conduite et budget.",
+          },
+          {
+            q: "Occasion ou neuf ?",
+            a: "Occasion = économique mais risqué, neuf = sûr mais cher. Nous sécurisons l’occasion.",
+          },
+          {
+            q: "Peut-on négocier le prix ?",
+            a: "Oui, et un professionnel obtient souvent un meilleur prix.",
+          },
+        ],
       },
     ],
   },

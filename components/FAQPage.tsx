@@ -23,12 +23,17 @@ export default function FAQPage({ t }: any) {
       {/* FAQ CONTENT */}
       <section className="py-20 px-4 max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="w-full space-y-4">
-          {t.faqPage.items.map((item: any, i: number) => (
+          {t.faqPage.categories.map((category, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="card-ui px-4">
-              <AccordionTrigger>{item.q}</AccordionTrigger>
+              <AccordionTrigger>{category.title}</AccordionTrigger>
 
               <AccordionContent className="text-muted-foreground">
-                {item.a}
+                {category.items.map((item, j) => (
+                  <div key={j}>
+                    <p>{item.q}</p>
+                    <p>{item.a}</p>
+                  </div>
+                ))}
               </AccordionContent>
             </AccordionItem>
           ))}
@@ -36,7 +41,7 @@ export default function FAQPage({ t }: any) {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 text-center bg-gradient-to-r from-background to-card">
+      <section className="py-20 px-4 text-center bg-linear-to-r from-background to-card">
         <h2 className="text-2xl text-primary mb-6 font-heading">
           {t.cta.title}
         </h2>
